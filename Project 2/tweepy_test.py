@@ -13,6 +13,7 @@ def get_auth():
     return auth
 
 
+# Get the user timeline
 def get_timeline(auth):
     api = tweepy.API(auth)
 
@@ -21,6 +22,19 @@ def get_timeline(auth):
         print(tweet.text)
 
 
+# Get the user status
+def get_status(auth, id):
+    api = tweepy.API(auth)
+    return api.get_status(id)
+
+
+#  Get the followers of specified id or screen name
+def get_followers(auth, id):
+    api = tweepy.API(auth)
+    return api.followers(id)
+
+
 if __name__ == '__main__':
     auth = get_auth()
     get_timeline(auth)
+    print(get_followers(auth, ''))

@@ -16,5 +16,5 @@ def initialize_boto():
 
 if __name__ == '__main__':
     bom = initialize_boto()
-    bom.check_accounts_in(['@clayadavis', '@onurvarol', '@jabawack'])
+    # bom.check_accounts_in(['@clayadavis', '@onurvarol', '@jabawack'])
     print(bom.check_account('@clayadavis'))
